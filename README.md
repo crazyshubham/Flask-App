@@ -6,9 +6,15 @@ This project is a **Flask-based web application** that demonstrates **Named Enti
 
 Users can:
 
-* Register and log in securely
-* Input text
-* Extract named entities like **Person, Organization, Location (GPE)**
+* 🔐 Register and log in
+* ✍️ Input custom text
+* 🧠 Extract named entities like **Person, Organization, Location (GPE)**
+
+---
+
+## 🌐 Live Demo
+
+👉 https://flask-app-vdrj.onrender.com
 
 ---
 
@@ -16,10 +22,10 @@ Users can:
 
 * 🔐 User Authentication (Register & Login)
 * 🧾 Named Entity Recognition (NER)
-* 🧠 NLP using NLTK
-* 🎨 Clean UI with CSS styling
+* 🧠 NLP powered by NLTK
+* 🎨 Clean and responsive UI
 * 🔒 Session-based access control
-* 📊 Displays extracted entities in table format
+* 📊 Results displayed in structured table format
 
 ---
 
@@ -29,17 +35,16 @@ Named Entity Recognition (NER) is a Natural Language Processing technique used t
 
 ### Example:
 
-Input:
+**Input:**
 
 ```
-Elon Musk founded SpaceX in California
+I am Shubham Upadhyay from India
 ```
 
-Output:
+**Output:**
 
-* Elon Musk → PERSON
-* SpaceX → ORGANIZATION
-* California → GPE (Location)
+* Shubham Upadhyay → PERSON
+* India → GPE
 
 ---
 
@@ -48,7 +53,8 @@ Output:
 * **Backend:** Python, Flask
 * **Frontend:** HTML, CSS (Jinja2 Templates)
 * **NLP Library:** NLTK
-* **Database:** Custom DB module (`db.py`)
+* **Deployment:** Render
+* **Database:** Custom module (`db.py`)
 
 ---
 
@@ -76,8 +82,8 @@ project/
 ### 1️⃣ Clone the repository
 
 ```
-git remote add origin https://github.com/crazyshubham/Flask-App.git
-cd your-repo-name
+git clone https://github.com/crazyshubham/Flask-App.git
+cd Flask-App
 ```
 
 ### 2️⃣ Install dependencies
@@ -113,47 +119,50 @@ http://127.0.0.1:5000/
 ## 🔐 Authentication Flow
 
 1. User registers
-2. Data stored via `db.py`
+2. Data stored using `db.py`
 3. User logs in
-4. Session created
+4. Session is created
 5. Access granted to protected pages
 
 ---
 
-## 🔍 How NER Works (In This Project)
+## 🔍 How NER Works
 
 1. Text input from user
 2. Tokenization using `word_tokenize`
 3. POS tagging using `pos_tag`
 4. Chunking using `ne_chunk`
-5. Extract entities and display
+5. Extract entities and display results
 
 ---
 
 ## 📊 Example Output
 
-| # | Entity  | Type   |
-| - | ------- | ------ |
-| 1 | Shubham | PERSON |
-| 2 | India   | GPE    |
+| # | Entity           | Type   |
+| - | ---------------- | ------ |
+| 1 | Shubham Upadhyay | PERSON |
+| 2 | India            | GPE    |
 
 ---
 
 ## ⚠️ Limitations
 
-* Uses basic NLTK model (not highly accurate)
-* No password hashing (for demo purposes)
-* Simple UI (can be improved)
+* Uses basic NLTK model (limited accuracy)
+* No password hashing (not production-ready)
+* Basic UI design
 
 ---
 
 ## 🔮 Future Improvements
 
 * 🔐 Add password hashing (bcrypt)
-* 🤖 Use advanced models (SpaCy / Transformers)
+* 🤖 Upgrade to SpaCy / Transformers
 * 🎨 Improve UI (React / Tailwind)
-* 📊 Add more NLP features (Sentiment Analysis, Summarization)
-* ☁️ Deploy on cloud (Render / AWS)
+* 📊 Add more NLP features:
+
+  * Sentiment Analysis
+  * Text Summarization
+* ☁️ Enhance deployment (Docker, AWS)
 
 ---
 
@@ -165,4 +174,4 @@ http://127.0.0.1:5000/
 
 ## 📜 License
 
-This project is for **educational purposes**.
+This project is for **educational purposes only**.
