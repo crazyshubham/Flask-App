@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h2>Named Entity Recognition (NER)</h2>
+
+
+<p style="max-width:700px; margin:10px auto 25px; line-height:1.6;">
+For example, in the sentence <b>"I am Shubham Upadhyay I live in Delhi"</b>, NER identifies:
+<br><br>
+• Shubham Upadhyay → Person<br>
+• Delhi → Location(GPE)
+</p>
+
+
+
+<form action="/perform_ner" method="post">
+    <label>Type Your Text Here:</label><br><br>
+    <textarea name="ner_text" rows="5" cols="60">{{ text or '' }}</textarea><br><br>
+    <input type="submit" value="Perform NER">
+</form>
+
+
+
+
+{% if entities is not none %}
+    <h3>Results:</h3>
+
+    {% if entities %}
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Entity</th>
+                <th>Type</th>
+            </tr>
+
+            {% for entity, etype in entities %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ entity }}</td>
+                <td>{{ etype }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <p><strong>Total Entities Found: {{ entities|length }}</strong></p>
+
+    {% else %}
+        <p class="no-entity">No named entities found in the given text.</p>
+    {% endif %}
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h1>Welcome to NLP App 👋</h1>
+
+<p style="max-width:700px; margin:10px auto 20px; line-height:1.6;">
+Hello! You're now logged in. This application helps you explore Natural Language Processing (NLP) tasks in a simple and interactive way.
+</p>
+
+<h3>What you can do here</h3>
+
+<p style="max-width:700px; margin:10px auto 25px; line-height:1.6;">
+You can analyze text and extract useful information using advanced NLP techniques. One of the main features available is <b>Named Entity Recognition (NER)</b>, which identifies important elements like names, places, and organizations from text.
+</p>
+
+<h3>Try it now 🚀</h3>
+
+<p style="max-width:700px; margin:10px auto 20px; line-height:1.6;">
+Click below to open the NER tool. Enter any sentence and see how the system detects entities in real-time.
+</p>
+
+
+<div style="text-align:center; margin-top:20px;">
+    <a href="/ner">
+        <button style="padding:12px 25px; border:none; border-radius:6px; background:#00e5a0; font-weight:bold; cursor:pointer;">
+            Go to NER Tool
+        </button>
+    </a>
+</div>
+
+</body>
+</html>

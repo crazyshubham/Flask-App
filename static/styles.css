@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #0d0f14;
+  color: #e8eaf0;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Main content wrapper (auto applied via body) */
+body > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: 'Syne', sans-serif;
+  text-align: center;
+  color: #00e5a0;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #7a8099;
+  text-align: center;
+}
+
+/* Paragraphs (NER theory section) */
+p {
+  color: #c5c9d6;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* FORM CARD */
+form {
+  background: #161a23;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #2a2f3d;
+  margin: 25px auto;
+  max-width: 600px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* Labels */
+label {
+  font-size: 0.8rem;
+  color: #7a8099;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+/* Inputs + textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #2a2f3d;
+  background: #1e2330;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Textarea fix */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Focus */
+input:focus,
+textarea:focus {
+  border-color: #00e5a0;
+  box-shadow: 0 0 6px rgba(0,229,160,0.5);
+}
+
+/* Button */
+input[type="submit"] {
+  background: #00e5a0;
+  color: #0d0f14;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: #00b87d;
+}
+
+/* TABLE (NER results) */
+table {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #2a2f3d;
+  text-align: center;
+}
+
+th {
+  background: #00e5a0;
+  color: #0d0f14;
+}
+
+tr:nth-child(even) {
+  background: #1e2330;
+}
+
+/* Result count */
+strong {
+  color: #00e5a0;
+}
+
+/* Links */
+a {
+  color: #00e5a0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Profile page list fix */
+ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Messages */
+p[style*="color:red"] {
+  color: #ff5c7a !important;
+}
+
+p[style*="color:green"] {
+  color: #00e5a0 !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  form {
+    padding: 18px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}

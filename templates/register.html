@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NLP APP | Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<h1> NLP App</h1>
+
+<h3>Register Here</h3>
+
+{% if message%}
+<p>{{message}}</p>
+
+{% endif %}
+
+
+<form action="/perform_registration" method="post">
+    <label>Name</label><br>
+    <input type="text" name="User_name" required><br>
+
+    <label>Email</label><br>
+    <input type="email" name="User_email" required><br>
+
+    <label>Password</label><br>
+    <input type="password" name="User_password" required><br>
+    <br>
+
+    <input type="submit" value="Register" ><br>
+
+
+</form>
+
+
+<p>Already a Member? <a href="/login" > Login </a></p>
+
+</body>
+</html>
