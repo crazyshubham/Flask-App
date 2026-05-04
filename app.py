@@ -1,3 +1,12 @@
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('averaged_perceptron_tagger_eng')
+nltk.download('maxent_ne_chunker')
+nltk.download('maxent_ne_chunker_tab')
+nltk.download('words')
+
 from flask import Flask, render_template, request, redirect, session
 from db import *
 from nltk import word_tokenize, pos_tag, ne_chunk
@@ -42,7 +51,6 @@ def perform_registration():
 def perform_login():
     email = request.form.get('User_email')
     password = request.form.get('User_password')
-
     response = dbo.search(email, password)
 
     if response:
@@ -95,4 +103,5 @@ def perform_ner():
     else:
         return redirect('/')
 
-app.run(debug=True)
+if __name__ == '__main__':  
+    app.run(debug=True)
